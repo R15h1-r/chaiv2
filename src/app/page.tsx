@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Menu, X, Zap, Heart, Twitter, Facebook, Instagram, Code } from 'lucide-react';
 
 // NOTE: Make sure you have a font file at /public/fonts/SAMAN___.ttf
@@ -96,11 +97,13 @@ const HomePage = () => {
           <div className="flex-1"></div>
           <div className="flex-1 flex justify-center">
             <a href="#" className="flex items-center gap-3">
-              <img
-                src="/tea-cup-svgrepo-com.svg"
-                alt="Chai4Me Logo"
-                className="w-12 h-12 shrink-0"
-              />
+              <Image
+  src="/tea-cup-svgrepo-com.svg"
+  alt="Chai4Me Logo"
+  width={48} // w-12 is 48px
+  height={48} // h-12 is 48px
+  className="shrink-0"
+/>
               <div className={`transition-all duration-500 ease-in-out grid ${isScrolled ? 'grid-cols-[1fr]' : 'grid-cols-[0fr]'}`}>
                 <div className="overflow-hidden">
                   <span
@@ -177,7 +180,7 @@ const Features = () => {
     {
       icon: <Code className="h-8 w-8 text-brand-primary" />,
       title: 'Open Source & Free',
-      description: 'Chai4Me is a community-driven project. It\'s completely free to use, forever. No hidden costs.'
+      description: 'Chai4Me is a community-driven project. It&apos;s completely free to use, forever. No hidden costs.'
     }
   ];
 
@@ -235,9 +238,16 @@ const Testimonials = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonialList.map((testimonial, index) => (
             <div key={index} className="bg-brand-surface p-8 rounded-lg border border-transparent hover:border-brand-primary/30">
-              <p className="text-brand-muted mb-6 font-body">"{testimonial.quote}"</p>
+              <p className="text-brand-muted mb-6 font-body">&quot;{testimonial.quote}&quot;</p>
               <div className="flex items-center">
-                <img src={testimonial.avatar} alt={testimonial.author} className="w-12 h-12 rounded-full mr-4" />
+                <Image
+  src={testimonial.avatar}
+  alt={testimonial.author}
+  width={48} // w-12 is 48px
+  height={48} // h-12 is 48px
+  className="rounded-full mr-4"
+  unoptimized
+/>
                 <div>
                   <p className="font-semibold text-brand-text font-heading">{testimonial.author}</p>
                   <p className="text-sm text-brand-muted font-body">@{testimonial.handle}</p>
