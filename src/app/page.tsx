@@ -267,8 +267,10 @@ const CallToAction = () => {
     <section className="bg-brand-surface py-20">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-brand-text font-heading">Ready to Start?</h2>
-        <p className="mt-4 text-lg text-brand-muted max-w-2xl mx-auto font-body">It's free, open-source, and takes less than a minute. Your audience is waiting to buy you a chai.</p>
-        <div className="mt-8">
+<p className="mt-4 text-lg text-brand-muted max-w-2xl mx-auto font-body">
+  It&apos;s free, open-source, and takes less than a minute. Your audience is waiting to buy you a chai.
+</p>        
+<div className="mt-8">
           <a href="#" className="inline-block px-10 py-4 bg-brand-primary text-brand-background rounded-md font-semibold hover:bg-opacity-80 transition-colors font-heading">
             Start My Page
           </a>
